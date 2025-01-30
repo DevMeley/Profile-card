@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5f54f8e6b5.js" crossorigin="anonymous"></script>
+    <title>Profile Card</title>
+</head>
+<body>
+    <div class="card">
+        <div class="profile-info">
+            <img src="profile-image.JPG" alt="Profile Picture" class="profile-picture" data-testid="profilePicture">
+            <h2 data-testid="fullName">Ayantola Abisola Monsurat</h2>
+            <h4 data-testid="jobTitle">Software Developer</h4>
+            <p data-testid="emailAddress"><a href="mailto:ayantolamonsurat@gmail.com">ayantolamonsurat@gmail.com</a></p>
+        </div>
+        <div class="bio">
+            <p data-testid="shortBio">Passionate software developer with experience in web development, backend engineering, and cloud computing.</p>
+            <p data-testid="currentLocation">Osun state, Nigeria</p>
+            <div class="social-links" data-testid="socialLinks">
+                <a href="https://linkedin.com/in/abisola-monsurat-ayantola-811065235" target="_blank"><i class="icon fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/DevMeley" target="_blank"><i class="fa-brands fa-github icon"></i></a>
+                <a href="https://x.com/Meleyortan" target="_blank"><i class="icon fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        
+        <p data-testid="currentTimeUTC" id="utcTime"></p>
+    </div>
+
+    <script>
+        function updateTime() {
+            document.getElementById("utcTime").textContent = new Date().toISOString().slice(0, 19).replace("T", " ");
+        }
+        updateTime();
+    </script>
+</body>
+</body>
+</html>
